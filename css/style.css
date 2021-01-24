@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(245, 245, 220, 0.30);
+}
+
+/* HOMEPAGE - HOMEPAGE - HOMEPAGE */
+
+/* HEADER - HEADER - HEADER */
+
+header{
+    position: fixed;
+    float: left;
+    background-color: white;
+    padding-top: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    z-index: 2;
+}
+
+#headinfo li:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+    border-radius: 3px;
+}
+
+header img{
+    width: 5%;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+#headinfo{
+    display: flex;
+    padding-left: 25px;
+}
+
+#headinfo ul{
+    padding-left: 0px;
+    float: left;  
+    display: flex;
+    padding-top: 0;
+    margin: auto 0;    
+}
+
+#headinfo ul ul{
+    position: absolute;
+    top: 46px;
+    left: 19.2%;
+    background-color: white;
+    border-radius: 3px;,
+    padding: 0;
+    margin: 0 auto;
+}
+
+#headinfo ul li{
+    list-style: none;
+    display: block;
+    padding: 6px;
+}
+
+#headinfo li a{
+    text-decoration: none;
+    color: black;
+}
+
+#headinfo ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 1s ease;
+    margin-top: 0;
+    display: none; 
+}
+
+#headinfo ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+#login{
+    padding-right: 25px;
+    display: flex;
+    justify-content: flex-end;
+    width: 230px;
+    margin: auto;
+}
+
+#login a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.selectedlang{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    width: 52px;
+    padding-top: 8px;
+}
+
+.langmenu{
+    padding-right: 0px;
+}
+
+.selectedlang:before{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://www.countryflags.io/ca/shiny/24.png);
+}
+
+.langmenu ul{
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 46px;
+    background-color: white;
+    border-radius: 3px;
+    right: 23px;
+}
+
+.langmenu ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.langmenu li:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+    border-radius: 3px;
+    width: 55px;
+}
+
+.langmenu ul li a{
+    width: 55px;
+}
+
+.langmenu ul li a:before{
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://www.countryflags.io/tr/shiny/24.png);
+    vertical-align: middle;
+    margin: 4px;
+}
+
+.fr:before{
+    background-image: url(https://www.countryflags.io/ca/shiny/24.png) !important; 
+}
+
+.tr:before{
+    background-image: url(https://www.countryflags.io/tr/shiny/24.png) !important; 
+}
+
+.langmenu:hover ul{
+    display: block;
+}
+
+.signbutton a{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.signbutton a:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+}
+
+/* HEADER - HEADER - HEADER */
+
+/* BANNER - BANNER - BANNER */
+
+#banner{
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+    padding-bottom: 50px;
+}
+
+#banner img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#banner h3{
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    left: 50%;
+    top: 44%;
+    font-size: 4vw;
+    color: black;
+    text-shadow: 0px 0px 20px rgba(0, 128, 0, 0.2);
+}
+
+#banner span{
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    left: 50%;
+    top: 58%;
+    font-size: 2vw;
+    color: black;
+    text-shadow: 0px 0px 20px rgba(0, 128, 0, 0.2);
+}
+
+#banner a{
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    transform:translate(-50%,-50%);
+    left: 50%;
+    top: 68%;
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(59, 82, 73, 0.69);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px 2px rgba(0, 128, 0, 0.50);
+}
+
+#banner a:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+}
+
+/* BANNER - BANNER - BANNER */
+
+/* CAROUSEL - CAROUSEL - CAROUSEL */
+
+#shopbanner{
+    padding: 50px;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#shopcol{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#shopcol a{
+    text-decoration: none;
+    color: black;
+    background-color: rgba(59, 82, 73, 0.69); 
+    border-radius: 3px;
+    box-shadow: 0px 0px 30px 2px rgba(0, 128, 0, 0.50);
+    padding: 5px;
+    display: inline-block;
+}
+
+#shopcol a:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+}
+
+#shopcol img{
+    width: 80%;
+    border-radius: 3px;
+    transition: .5s ease;
+}
+
+.col:hover .visible1{
+    visibility: visible;
+    opacity: 1;
+}
+
+.col:hover .visible2{
+    visibility: visible;
+    opacity: 1;
+}
+
+.col:hover .visible3{
+    visibility: visible;
+    opacity: 1;
+}
+
+.visible1, .visible2, .visible3{
+    position: absolute;
+    top: 160%;
+    visibility: hidden;
+    background-color: rgba(245, 245, 220, 0.80);
+    overflow: hidden;
+}
+
+.visible1 div{
+    display: flex;
+    flex-direction: column;
+}
+
+.visible2 div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 80.8px;
+}
+
+.visible3 div{
+    display: flex;
+    flex-direction: column;
+    padding: 0 48.3px;
+}
+
+.visible1 div span{
+    padding: 3.5px;
+}
+
+.visible2 div span{
+    padding: 3.5px;
+}
+
+.visible3 div span{
+    padding: 3.5px;
+}
+
+.visible1{
+    left: 6.6%;
+}
+
+.visible2{
+    left: 37.6%;;
+}
+
+.visible3{
+    right: 6.6%;
+}
+
+/* CAROUSEL - CAROUSEL - CAROUSEL */
+
+/* LOCATION - LOCATION - LOCATION */
+
+#location{
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#location div:first-child{
+    margin: auto 0;
+}
+
+#location span{
+    display: block;
+    padding: 10px;
+}
+
+#location iframe{
+    border: 2px solid rgba(59, 82, 73);
+    border-radius: 3px;
+}
+/* LOCATION - LOCATION - LOCATION */
+
+/* SUBSCRIBE - SUBSCRIBE - SUBSCRIBE */
+
+#subscribe{
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#email {
+    padding: 5px 20px;
+    margin: 5px;
+    font-size: 1.2vw;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subbut{
+    border-radius: 3px;
+    font-size: 1.2vw;
+    padding: 5px 10px;
+    background-color: rgba(59, 82, 73, 0.50);
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 30px 2px rgba(0, 128, 0, 0.20);
+}
+
+.subbut:hover{
+    background-color: rgba(0, 128, 0, 0.56);
+}
+
+/* SUBSCRIBE - SUBSCRIBE - SUBSCRIBE */
+
+/* FOOTER - FOOTER - FOOTER */
+
+footer{
+    background-color: white;
+    padding: 20px 25px 0px 25px;
+    margin: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+#footfirst, #footsecond {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footfirst{
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+    padding-bottom: 10px;
+}
+
+#footsecond{
+    padding: 10px;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer li a{
+    text-decoration: none;
+    color: black;
+}
+
+footer li a:hover{
+    color: rgba(0, 128, 0, 0.76);
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+#applogo{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 3vw;
+}
+
+#applogo a{
+    color: black;
+    padding: 15px;
+}
+
+#social{
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+    padding: 10px;
+    margin: auto 0;
+}
+
+#social a{
+    padding: 0px 15px;
+    color: black;
+}
+
+#footlinks, #copy{
+    margin: auto 0;
+}
+
+/* FOOTER - FOOTER - FOOTER */
+
+/* HOMEPAGE - HOMEPAGE - HOMEPAGE */
+
+
+
+
+/* ABOUT - ABOUT - ABOUT */
+
+#whoarewe{
+    padding: 80px 60px 50px 60px;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#who{
+    column-count: 2;
+    padding: 10px;
+}
+
+#who img{
+    width: 600px;
+    border-radius: 10px;
+}
+
+#who h3{
+    font-size: 2vw;
+    padding-top: 20px;
+}
+
+#whatwedo{
+    padding: 80px 60px 50px 60px;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#what{
+    column-count: 2;
+    padding: 10px;
+}
+
+#what img{
+    width: 600px;
+    border-radius: 10px;
+}
+
+#what h3{
+    font-size: 2vw;
+}
+
+#crew{
+    padding: 50px;
+    text-align: center;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#crew h2{
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+#crewmember{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 50px 10px;
+}
+
+#cofound, .nutri{
+    padding: 10px
+} 
+
+#cofound h3, .nutri h3{
+    font-size: 1.1vw;
+} 
+
+.nutri img{
+    border-radius: 100%;
+    width: 140px;
+}
+
+#cofound img{
+    border-radius: 50%;
+    width: 140px;
+}
+
+/* ABOUT - ABOUT - ABOUT */
+
+
+
+
+/* CONTACT - CONTACT - CONTACT */
+
+#contact{
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#contact input{
+    font-size:2vw;
+    border: solid 2px rgba(59, 82, 73, 0.69);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    width: 30%
+}
+
+#form1, #form2, #form3{
+    padding: 20px 10px;
+    margin: 10px;
+}
+
+#form3{
+    font-size: 2vw;
+    text-align: center;
+}
+
+#about{
+    border: solid 2px rgba(59, 82, 73, 0.69);
+    border-radius: 3px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+}
+
+#comment {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    width: 58%;
+    height: 10vw;
+    text-align: left;
+    border-radius: 3px;
+    border: solid 2px rgba(59, 82, 73, 0.69);
+}
+
+.submitbut{
+    padding-top: 10px;
+    margin: auto;
+    width: 10%;
+}
+
+.submitbut a{
+    border-radius: 3px;
+    font-size: 1.8vw;
+    padding: 10px;
+    background-color: rgba(59, 82, 73, 0.50);
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 30px 2px rgba(0, 128, 0, 0.20);
+    display: block;
+}
+
+.submitbut a:hover{
+    background-color: rgba(0, 128, 0, 0.56);
+}
+
+/* CONTACT - CONTACT - CONTACT */
+
+
+
+/* ONLINE DIET - ONLINE DIET - ONLINE DIET */
+
+#dietbanner{
+    padding: 110px 50px 50px 50px;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#dietban{
+    display: flex;
+   
+}
+
+#dietban img{
+    border-radius: 10px;
+}
+
+#howit{
+    padding: 20px;
+}
+
+#howit h3{
+    font-size: 2vw;
+    padding: 0px;
+}
+
+#howit p{
+    font-size: 1.8vw;
+}
+
+#howit a{
+    text-decoration: none;
+    color:rgba(59, 82, 73, 0.69);
+}
+
+#howit a:hover{
+    color: rgba(0, 128, 0, 0.56);
+}
+
+#bmr {
+    padding: 50px;
+    text-align: center;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#genderpick input{
+    color: rgba(59, 82, 73, 0.69);
+}
+
+#variables input {
+    margin: 10px;
+    font-size:1.4vw;
+    border: solid 2px rgba(59, 82, 73, 0.69);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    width: 11%;
+}
+
+#bmr button{
+    margin: 10px;
+    font-size:1.5vw;
+    border: solid 2px rgba(59, 82, 73, 0.69);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    width: 11%;
+}
+
+#bmr button:hover{
+    background-color: rgba(0, 128, 0, 0.56);
+}
+
+/* ONLINE DIET - ONLINE DIET - ONLINE DIET */
+
+
+
+/* SHOP - SHOP - SHOP */
+
+#shopprod{
+    padding: 110px 20px 50px 20px;
+    display: flex;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+#links{
+    height: 19.4%;
+    width: 100%;
+    background-color: rgba(245, 245, 220, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#adver img{
+    padding-top: 200px;
+}
+
+#sidebar a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: solid 1px rgba(59, 82, 73, 0.69);
+}
+
+#sidebar a:hover{
+    background-color: rgba(0, 128, 0, 0.76);
+}
+
+#products{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#products img{
+    width: 90%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.proinfo1{
+    position: relative;
+    top: -19.6%;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    margin: 0 18.4px;
+}
+
+.proinfo2{
+    position: relative;
+    top: -19.6%;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    margin: 0 18.4px;
+}
+
+.proinfo3{
+    position: relative;
+    top: -19.6%;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.50);
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    margin: 0 18.4px;
+}
+
+#products span{
+    display: block;
+}
+
+#products a{
+    text-decoration: none;
+    color: rgba(59, 82, 73, 1);
+    font-weight: bold;
+}
+
+#products a:hover{
+    color: rgba(0, 128, 0, 1);
+}
+
+#firstline{
+    display: flex;
+}
+
+#secondline{
+    display: flex;
+}
+
+#thirdline{
+    display: flex;
+}
+
+/* SHOP - SHOP - SHOP */
+
+

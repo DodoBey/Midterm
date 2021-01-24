@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Perverende - Eat Healthy, Stay Healthy!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3f13afb42f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <div id="headinfo">
+       <img src="img/May%20Logo.png" alt="">
+        <ul> 
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop Online</a>
+            <ul class="dropdown">
+                <li><a href="#">Bowls</a></li>
+                <li><a href="#">Energy Balls</a></li>
+                <li><a href="#">Crackers and Biscuits</a></li>
+                <li><a href="#">Smoothies</a></li>
+                <li><a href="#">Cakes</a></li>
+            </ul>
+            </li>
+            <li><a href="onlinediet.html">Online Diet</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        </div>
+        <div id="login">
+           <div class="signbutton">
+            <a href="#">Sign In</a>
+        </div>
+            <div class="langmenu">
+                <div class="selectedlang">
+                    EN
+                </div>
+                <ul>
+                    <li><a href="#" class="fr">FR</a></li>
+                    <li><a href="#" class="tr">TR</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </header>
+    <section id="dietbanner">
+        <div id="dietban">
+            <div>
+            <img src="img/online1.jpg" alt=""></div>
+            <div id="howit">
+            <h3>How It Works?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia deleniti quos, necessitatibus numquam atque dicta nihil odio nulla eaque quod similique sit deserunt odit quaerat. Reprehenderit nobis quae laborum dolor! For more details please <a href="contact.html">contact us!</a></p></div>
+        </div>
+    </section>
+    <section id="bmr">
+       
+       <h2>Basal Metabolic Rate Calculater</h2>
+        <form action="#">
+           <div id="genderpick">
+            <input type="radio" id="gender" name="gender" value="male">Male
+            <input type="radio" id="gender" name="gender" value="female">Female
+            </div>
+            <div id="variables">
+            <input type="number" id="age" value="" placeholder="Age">
+            <input type="number" id="height" value="" placeholder="Height (cm)">
+            <input type="number" id="weight" value="" placeholder="Weight (kg)">
+            </div>
+        </form>
+        
+        <button type="button" onclick="">Calculate!</button>
+        <p id="result">Basal Metabolic Rate</p>
+    </section>
+    <footer>
+        <div id="footfirst">
+        <div id="footlinks">
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Shop Online</a></li>
+                <li><a href="onlinediet.html">Online Diet</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="app">
+            <div><span>DOWNLOAD OUR APP</span></div>
+            <div id="applogo">
+            <a href="#"><i class="fab fa-app-store-ios"></i></a>
+            <a href="#"><i class="fab fa-google-play"></i></a>
+            </div>
+        </div>
+        </div>
+        <div id="footsecond">
+        <div id="copy">
+            <span>&copy All Right Reserved! - 2021 - Powered by DodoBey</span>
+        </div>
+        <div id="social">
+                <a href="https://www.instagram.com/dyt.merveaydinyigiter/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/perverende" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </div>
+        </div>
+    </footer>
+    <script>
+    var bmr;
+        
+        function calc() {
+            var gender = document.querySelector('#gender:checked').value;
+            
+            var age=
+                document.getElementById("age").value;
+            var height=
+                document.getElementById("height").value;
+            var weight=
+                document.getElementById("weight").value;
+            if (gender == "male") {
+                bmr = 66.5 + (13.75 * weight) + (5.03 * height) - (6.75 * age);
+            }
+            else {
+                bmr = 655.1 + (9.56 * weight) + (1.85 * height) - (4.68 * age);
+            }
+            }
+        
+        document.getElementsByTagName("button")[0].addEventListener("click", function() {
+            calc();
+            document.getElementById("result").innerHTML = ('Your Approximate Basal Metabolic Rate is ' + bmr.toFixed(2) + ' Cal/Day');
+        })
+    
+    </script>
+</body>
+</html>
